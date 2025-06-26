@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <title>Phone Copied</title>
   <script>
-    const phone = atob("KzkxIDgxNjk0IDAxNjUw");
-    navigator.clipboard.writeText(phone).then(function() {
-      window.location.href = "https://www.iitrpr.ac.in";
+    document.addEventListener("DOMContentLoaded", function () {
+      const phone = atob("KzkxODE2OTQwMTY1MA=="); // Decodes: +918169401650
+      navigator.clipboard.writeText(phone).then(() => {
+        window.close(); // 🚪 Close the tab
+      }).catch(() => {
+        alert("Failed to copy. Please try again.");
+        window.close();
+      });
     });
   </script>
 </head>
@@ -14,3 +19,4 @@
   <p>Phone number is being securely copied to clipboard...</p>
 </body>
 </html>
+
